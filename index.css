@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body { background-color: #0f172a; color: white; overflow-x: hidden; scroll-behavior: smooth; }
+
+/* Navbar */
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 8%; background: rgba(15, 23, 42, 0.9);
+    position: fixed; width: 100%; top: 0; z-index: 1000; backdrop-filter: blur(10px);
+}
+.logo { font-size: 24px; font-weight: 900; }
+.logo span { color: #6366f1; }
+.nav-links { display: flex; list-style: none; align-items: center; }
+.nav-links li a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; transition: 0.3s; }
+.nav-links li a:hover { color: #6366f1; }
+.warn-btn { background: none; border: none; font-size: 20px; cursor: pointer; margin-right: 15px; }
+
+/* Hero Section */
+.hero { padding: 150px 8% 80px; min-height: 100vh; }
+.hero-container { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
+.Ahmed-image img { width: 300px; height: 300px; border-radius: 50%; object-fit: cover; border: 5px solid #6366f1; }
+.hero-text { flex: 1; min-width: 300px; }
+.name { color: #6366f1; }
+.highlight { color: #818cf8; }
+.description-box { margin: 20px 0; border-right: 4px solid #6366f1; padding-right: 20px; }
+.cta-buttons { margin-top: 30px; }
+.btn-main, .btn-sub { padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-left: 10px; display: inline-block; }
+.btn-main { background: #6366f1; color: white; }
+.btn-sub { border: 2px solid #6366f1; color: white; }
+
+/* Projects */
+.projects { padding: 80px 8%; background: #111827; }
+.section-title { text-align: center; margin-bottom: 50px; font-size: 35px; }
+.projects-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.project-card { background: #1e293b; border-radius: 15px; overflow: hidden; cursor: pointer; transition: 0.3s; }
+.project-card:hover { transform: translateY(-10px); }
+.project-img { position: relative; height: 200px; }
+.project-img img { width: 100%; height: 100%; object-fit: cover; }
+.project-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(99, 102, 241, 0.8); display: flex; justify-content: center; align-items: center; opacity: 0; transition: 0.3s; }
+.project-card:hover .project-overlay { opacity: 1; }
+.project-info { padding: 20px; }
+.tags span { background: #334155; padding: 5px 10px; border-radius: 5px; font-size: 12px; margin-left: 5px; }
+
+/* Modal */
+.modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); align-items: center; justify-content: center; }
+.modal-content { background: #1e293b; padding: 40px; border-radius: 20px; text-align: center; border: 2px solid #6366f1; }
+.modal-icon { font-size: 50px; margin-bottom: 10px; }
+.modal-btn { margin-top: 20px; padding: 10px 25px; background: #6366f1; border: none; color: white; border-radius: 5px; cursor: pointer; }
+
+/* Contact */
+.contact { padding: 80px 8%; text-align: center; }
+.contact-info { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px; }
+.contact-item { background: #1e293b; padding: 20px; border-radius: 12px; cursor: pointer; display: flex; align-items: center; gap: 15px; transition: 0.3s; }
+.contact-item:hover { background: #334155; }
+.social-links { margin-top: 40px; font-size: 30px; }
+.social-icon { color: white; margin: 0 15px; transition: 0.3s; }
+.social-icon:hover { color: #6366f1; }
+
+/* Mobile Adjustment */
+@media (max-width: 768px) {
+    .hero-container { flex-direction: column; text-align: center; }
+    .description-box { border-right: none; border-bottom: 4px solid #6366f1; padding: 0 0 20px 0; }
+}
+.logo-area {
+    display: flex;
+    align-items: right ; /* بيخلي السنجاب والكلمة على خط واحد */
+    gap: 0px; /* المسافة بين الكلمة والسنجاب */
+}
+
+.squirrel-icon {
+    width: 200px; /* اتحكم في حجم السنجاب من هنا */
+    height: 50px;
+    transition: transform 1.s ease;
+}
+
+/* حركة صايعة: لما تقف بالماوس على اللوجو السنجاب يتحرك */
+.logo-area:hover .squirrel-icon {
+    transform: scale(1.2) rotate(5deg);
+}
+:root {
+  /* ألوان الانميشن - تقدر تغيرها براحتك */
+  --clr-1: #39E09B; /* أخضر لينك تري */
+  --clr-2: #ffffff; /* أبيض */
+  --clr-3: #00e5ff; /* أزرق سماوي */
+}
+
+.profile-card {
+  /* ده الـ container الخارجي */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.profile-pic {
+  position: relative;
+  width: 190px; /* حجم الصورة */
+  height: 190px;
+  background: #1a1a1a; /* لون الخلفية ورا الصورة */
+  border-radius: 70%; /* يخليها دورية */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* عشان الانميشن ميتطلعش بره الدايرة */
+  box-shadow: 0 0 40px rgba(0,0,0,0.5); /* ظل خفيف */
+}
+
+/* السحر بيبدأ هنا: الـ Before والـ After */
+
+.profile-pic::before {
+  content: '';
+  position: absolute;
+  width: 170%; /* أكبر من الدايرة عشان يغطيها */
+  height: 160%;
+  /* التدرج اللوني اللي بيلف */
+  background-image: conic-gradient(
+    transparent,
+    var(--clr-1),
+    var(--clr-2),
+    var(--clr-3),
+    transparent 70%
+  );
+  animation: spin 6s linear infinite; /* تشغيل الانميشن */
+}
+
+.profile-pic::after {
+  content: '';
+  position: absolute;
+  inset: 8px; /* المسافة بين الانميشن والصورة (سمك الإطار) */
+  background: #1a1a1a; /* لون الخلفية ورا الصورة */
+  border-radius: 70%;
+  z-index: 1; /* عشان يبقى فوق الـ Before */
+}
+
+.profile-pic img {
+  width: 100%; /* حجم الصورة جوه الدايرة */
+  height: 95%;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 2; /* عشان الصورة تبقى فوق كل حاجة */
+}
+
+/* تعريف الانميشن اللي بيلف */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

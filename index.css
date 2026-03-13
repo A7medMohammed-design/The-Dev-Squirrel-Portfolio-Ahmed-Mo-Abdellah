@@ -10,10 +10,10 @@ body { background-color: #0f172a; color: white; overflow-x: hidden; scroll-behav
 /* Navbar */
 .navbar {
     display: flex; justify-content: space-between; align-items: center;
-    padding: 25px 10%; background: rgba(15, 23, 42, 0.9);
+    padding: 15px 5%; background: rgba(15, 23, 42, 0.9);
     position: fixed; width: 100%; top: 0; z-index: 1000; backdrop-filter: blur(10px);
 }
-.logo { font-size: 24px; font-weight: 900; }
+.logo { font-size: 20px; font-weight: 800; }
 .logo span { color: #6366f1; }
 .nav-links { display: flex; list-style: none; align-items: center; }
 .nav-links li a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; transition: 0.3s; }
@@ -62,9 +62,9 @@ body { background-color: #0f172a; color: white; overflow-x: hidden; scroll-behav
 .social-icon:hover { color: #6366f1; }
 
 /* Mobile Adjustment */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .hero-container { flex-direction: column; text-align: center; }
-    .description-box { border-right: none; border-bottom: 4px solid #6366f1; padding: 0 0 20px 0; }
+    .description-box { border-right: none; border-bottom: 2px solid #6366f1; padding: 0 0 15px 0; }
 }
 .logo-area {
     display: flex;

@@ -44,24 +44,3 @@ window.onclick = (e) => { if (e.target == modal) closeAlert(); };
 
 // تشغيل الكتابة عند التحميل
 window.onload = typeEffect;
-
-function checkScreenSize() {
-    const width = window.innerWidth;
-    const navbar = document.querySelector('.navbar');
-
-    if (width <= 768) {
-        // لو موبايل، غير الستايل مباشرة
-        navbar.style.flexDirection = 'column';
-        navbar.style.backgroundColor = '#222'; // مثلاً
-    } else {
-        // لو لاب توب، رجعه لأصله
-        navbar.style.flexDirection = 'row';
-        navbar.style.backgroundColor = 'transparent';
-    }
-}
-
-// شغل الفانكشن أول ما الصفحة تحمل
-window.addEventListener('load', checkScreenSize);
-// وشغلها كل ما حجم الشاشة يتغير
-window.addEventListener('resize', checkScreenSize);
-

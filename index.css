@@ -10,7 +10,7 @@ body { background-color: #0f172a; color: white; overflow-x: hidden; scroll-behav
 /* Navbar */
 .navbar {
     display: flex; justify-content: space-between; align-items: center;
-    padding: 20px 8%; background: rgba(15, 23, 42, 0.9);
+    padding: 25px 20%; background: rgba(15, 23, 42, 0.9);
     position: fixed; width: 100%; top: 0; z-index: 1000; backdrop-filter: blur(10px);
 }
 .logo { font-size: 24px; font-weight: 900; }
@@ -69,11 +69,11 @@ body { background-color: #0f172a; color: white; overflow-x: hidden; scroll-behav
 .logo-area {
     display: flex;
     align-items: right ; /* بيخلي السنجاب والكلمة على خط واحد */
-    gap: 0px; /* المسافة بين الكلمة والسنجاب */
+    gap: 1px; /* المسافة بين الكلمة والسنجاب */
 }
 
 .squirrel-icon {
-    width: 200px; /* اتحكم في حجم السنجاب من هنا */
+    width: 50px; /* اتحكم في حجم السنجاب من هنا */
     height: 50px;
     transition: transform 1.s ease;
 }
@@ -152,32 +152,5 @@ body { background-color: #0f172a; color: white; overflow-x: hidden; scroll-behav
   }
   to {
     transform: rotate(360deg);
-  }
-
-}
-}
-/* تنسيقات الموبايل */
-@media screen and (max-width: 768px) {
-  .navbar {
-      flex-direction: column; /* يخلي اللوجو واللينكات تحت بعض */
-      padding: 10px;
-  }
-
-  .nav-links {
-      display: flex;
-      flex-direction: row; /* يخلي اللينكات جنب بعض لو مش كتير */
-      justify-content: center;
-      padding: 0;
-      gap: 10px;
-  }
-
-  .logo-area {
-      margin-bottom: 10px;
-  }
-
-  /* عشان الصور متكبرش عن حجم الشاشة */
-  img {
-      max-width: 100%;
-      height: auto;
   }
 }

@@ -153,4 +153,31 @@ body { background-color: #0f172a; color: white; overflow-x: hidden; scroll-behav
   to {
     transform: rotate(360deg);
   }
+
+}
+}
+/* تنسيقات الموبايل */
+@media screen and (max-width: 768px) {
+  .navbar {
+      flex-direction: column; /* يخلي اللوجو واللينكات تحت بعض */
+      padding: 10px;
+  }
+
+  .nav-links {
+      display: flex;
+      flex-direction: row; /* يخلي اللينكات جنب بعض لو مش كتير */
+      justify-content: center;
+      padding: 0;
+      gap: 10px;
+  }
+
+  .logo-area {
+      margin-bottom: 10px;
+  }
+
+  /* عشان الصور متكبرش عن حجم الشاشة */
+  img {
+      max-width: 100%;
+      height: auto;
+  }
 }

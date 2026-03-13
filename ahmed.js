@@ -43,7 +43,6 @@ function askForApp() { showModal("الأبليكشن في الطريق ....بس 
 window.onclick = (e) => { if (e.target == modal) closeAlert(); };
 
 // تشغيل الكتابة عند التحميل
-
 window.onload = typeEffect;
 
 function checkScreenSize() {
@@ -65,3 +64,4 @@ function checkScreenSize() {
 window.addEventListener('load', checkScreenSize);
 // وشغلها كل ما حجم الشاشة يتغير
 window.addEventListener('resize', checkScreenSize);
+

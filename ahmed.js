@@ -16,7 +16,7 @@ document.querySelectorAll('.copy-box').forEach(box => {
         navigator.clipboard.writeText(textToCopy).then(() => {
             const h3 = this.querySelector('h3');
             const originalText = h3.innerText;
-            h3.innerText = "تم النسخ! ✅";
+            h3.innerText = "تم النسخ ي قلبي ! ✅";
             setTimeout(() => { h3.innerText = originalText; }, 2000);
         });
     });
